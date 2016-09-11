@@ -63,10 +63,21 @@ In this cleaned snapshot, all passwords have been reset to "password".
 ### Commit your changes to your personal machine ###
 Work on your branch, e.g. _myfixes_.  Make commits using a [Git GUI][] or Git terminal commands on your local machine.
 
-When you are done with all your changes and are ready to contribute them to the Project, make sure they are all committed locally. Use a [Git GUI][] or on your local machine: <br>
+### Contribute your changes to the MO Project ###
+When you are done with all your changes and are ready to contribute them to the Project:
+
+#### Update Release Notes. ###
+We suggest adding a one-line update to the release notes, especially if your changes are user facing. 
+In `/config/locales/en.txt`:
+- Add an individual release update. See [news updates].
+- At the head of news content, add a link to the note you just created. See [news content].
+- Update the release title. See [news title]. 
+- On the VM, `rake lang:update`.
+
+#### Confirm that *all* changes are committed locally. ###
+Make sure all your changes are committed locally. Use a [Git GUI][] or on your local machine: <br>
 `git commit -a -m "insert commit message"` <br>
 
-### Contribute your changes to the MO Project ###
 #### Re-sync with the [Official MO Repo][] ###
 Make sure that your local commits are compatible with any changes to the [Official MO Repo][] since you last synced:
 - Replay your local fixes on top of the [Official MO Repo][]. Use a [Git GUI][] or on your local machine: <br>
@@ -82,9 +93,9 @@ Use a [Git GUI][] or on your local machine  <br>
 #### Create a Pull Request ####
 - Go to your personal [Github][] repository and click on "Pull Request".
 - Switch to your feature branch
-- Choose your feature branch in your personal [Github][] repo as the source branch
+- Choose your feature branch in your personal [Github][] repo as the source branch.
 - Choose origin repo "master" as the destination branch.
-- Check the "Allow edits from maintainers" checkbox. See [Improving collaboration with forks][]
+- Check the "Allow edits from maintainers" checkbox. See [Improving collaboration with forks][].
 - For more information see [Using pull requests][].
 
 ## Other ##
@@ -93,6 +104,7 @@ Consider subscribing/joining to follow the project more closely
 - Join the [MO Developers Google Group][] for discussion of development and operations of MO.
 - Watch the [Official MO Repo][]. This will notify you about code updates and Pull Requests, so that you can comment on them and test them. For information on testing others' pull requests, see [Pull Requests by Others][]
 - Watch the [MO developer-startup repo][]
+- Join the [MO Slack Team][] and use it to connect with other developers.
 - Bookmark the [MO persistent Goggle+ Hangout][] and use it to connect with other developers.
 
 - - -
@@ -135,6 +147,10 @@ One way to get a copy and test other developers' Pull Requests is by following t
 [MO developer-startup repo]: https://github.com/MushroomObserver/developer-startup
 [MO persistent Goggle+ Hangout]: https://plus.google.com/hangouts/_/calendar/bXVzaHJvb20ucG9ldEBnbWFpbC5jb20.bs6hddfvfrkh7hh5345okcs9hs?authuser=0
 [MO project issue tracker]: https://www.pivotaltracker.com/n/projects/224629
+[MO Slack Team]: https://mushroomobserver.slack.com/
+[news content]: https://github.com/MushroomObserver/mushroom-observer/blob/9e67767477fb1ac6ec2f26866d7695cefc0c3025/config/locales/en.txt#L1482
+[news title]: https://github.com/MushroomObserver/mushroom-observer/blob/9e67767477fb1ac6ec2f26866d7695cefc0c3025/config/locales/en.txt#L1480
+[news updates]: https://github.com/MushroomObserver/mushroom-observer/blob/9e67767477fb1ac6ec2f26866d7695cefc0c3025/config/locales/en.txt#L1485-L1506
 [Official MO Repo]: https://github.com/MushroomObserver/mushroom-observer
 [Pivotal Tracker]: https://www.pivotaltracker.com/
 [Pull Requests by Others]: /developer-workflow.md#pull-requests-by-others
